@@ -111,10 +111,8 @@ Use `getLidarData()` API to retrieve the Lidar data.
 * Segmentation: The segmentation of each lidar point's collided object
 
 ### Python Examples
-
-[drone_lidar.py](https://github.com/microsoft/AirSim/blob/master/PythonClient/multirotor/drone_lidar.py)
-
-[car_lidar.py](https://github.com/microsoft/AirSim/blob/master/PythonClient/car/car_lidar.py)
+- [drone_lidar.py](https://github.com/Microsoft/AirSim/tree/master/PythonClient//multirotor)
+- [car_lidar.py](https://github.com/Microsoft/AirSim/tree/master/PythonClient//car)
 
 ## Coming soon
 * Visualization of lidar data on client side.

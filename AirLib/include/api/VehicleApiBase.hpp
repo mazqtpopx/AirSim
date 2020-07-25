@@ -160,7 +160,7 @@ public:
     }
 
     // Distance Sensor API
-    virtual DistanceBase::Output getDistanceSensorData(const std::string& distance_sensor_name) const
+    virtual DistanceSensorData getDistanceSensorData(const std::string& distance_sensor_name) const
     {
         auto *distance_sensor = static_cast<const DistanceBase*>(findSensorByName(distance_sensor_name, SensorBase::SensorType::Distance));
         if (distance_sensor == nullptr)
