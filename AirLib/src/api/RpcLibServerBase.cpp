@@ -380,6 +380,10 @@ RpcLibServerBase::RpcLibServerBase(ApiProvider* api_provider, const std::string&
         getWorldSimApi()->setWind(wind.to());
     });
 
+    pimpl_->server.bind("listVehicles", [&]() -> vector<string> {
+        return getWorldSimApi()->listVehicles();
+    });
+
     //if we don't suppress then server will bomb out for exceptions raised by any method
     pimpl_->server.suppress_exceptions(true);
 }

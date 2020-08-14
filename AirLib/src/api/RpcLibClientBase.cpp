@@ -465,6 +465,11 @@ void RpcLibClientBase::simSetWind(const Vector3r& wind) const
     pimpl_->client.call("simSetWind", conv_wind);
 }
 
+vector<string> RpcLibClientBase::listVehicles()
+{
+    return pimpl_->client.call("listVehicles").as<vector<string>>();
+}
+
 void* RpcLibClientBase::getClient()
 {
     return &pimpl_->client;

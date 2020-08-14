@@ -74,6 +74,7 @@ public:
     virtual bool isRecording() const = 0;
 
     virtual void setWind(const Vector3r& wind) const = 0;
+    virtual vector<string> listVehicles() const = 0;
 };
 
 
