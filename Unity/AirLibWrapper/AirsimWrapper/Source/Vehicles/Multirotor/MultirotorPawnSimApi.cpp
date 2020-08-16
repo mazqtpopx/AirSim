@@ -110,9 +110,9 @@ void MultirotorPawnSimApi::updateRendering(float dt)
 
 	PrintLogMessage("Collision Count:", std::to_string(collision_response.collision_count_non_resting).c_str(), getVehicleName().c_str(), ErrorLogSeverity::Information);
 
-	for (auto i = 0; i < vehicle_api_messages_.size(); ++i)
+    for (const auto& message : vehicle_api_messages_)
 	{
-		PrintLogMessage(vehicle_api_messages_[i].c_str(), "30", getVehicleName().c_str(), ErrorLogSeverity::Information);
+		PrintLogMessage(message.c_str(), "30", getVehicleName().c_str(), ErrorLogSeverity::Information);
 	}
 
 	try
@@ -124,7 +124,7 @@ void MultirotorPawnSimApi::updateRendering(float dt)
 		PrintLogMessage(e.what(), "LogDebugLevel::Failure, 30", getVehicleName().c_str(), ErrorLogSeverity::Error);
 	}
 
-	for (int i = 0; i < rotor_actuator_info_.size(); i++)
+	for (auto i = 0u; i < rotor_actuator_info_.size(); ++i)
 	{
 		SetRotorSpeed(i, UnityUtilities::Convert_to_UnityRotorInfo(rotor_actuator_info_[i]), getVehicleName().c_str());
 	}

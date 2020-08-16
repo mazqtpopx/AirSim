@@ -16,7 +16,7 @@ namespace AirSimUnity
 	{
 		if (requests.size() > 0)
 		{
-			for (int i = 0; i < requests.size(); i++)
+			for (auto i=0u; i < requests.size(); i++)
 			{
 				ImageResponse airsim_response;
 				responses.push_back(airsim_response);
