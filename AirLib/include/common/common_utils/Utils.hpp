@@ -678,7 +678,7 @@ public:
         return uval[0] == 1;
     }
 
-    static void writePfmFile(const float * const image_data, int width, int height, std::string path, float scalef=1)
+    static void writePFMfile(const float * const image_data, int width, int height, const std::string& path, float scalef=1)
     {
         std::fstream file(path.c_str(), std::ios::out | std::ios::binary);
 
