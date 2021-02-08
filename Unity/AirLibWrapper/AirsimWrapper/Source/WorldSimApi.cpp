@@ -205,4 +205,12 @@ std::vector<std::string> WorldSimApi::listVehicles() const
     return vehicle_names;
 }
 
+bool createVehicleAtRuntime(const std::string& vehicle_name, const std::string& vehicle_type, const Pose& pose, const std::string& pawn_path)
+{
+    throw std::invalid_argument(common_utils::Utils::stringf(
+        "createVehicleAtRuntime (simAddVehicle API) is not supported on unity").c_str());
+    return false;
+}
+
+
 #pragma endregion
